@@ -197,9 +197,11 @@
 %	\vspace{11pt}
 \bigskip
 			\ifx \@author\@empty\relax
-				\else {\noindent\raggedleft\textit{\@author}} \\
+				\else {\noindent\raggedleft\textit{\@author}}
+
 			\ifx\@affiliation\@empty\relax
-				\else {\raggedleft\textit{\@affiliation}} \\
+				\else {\raggedleft\textit{\@affiliation}}
+                \vspace{1em}
 			\fi
 }
 
@@ -210,12 +212,13 @@
 	% change footnote style to get *
 %	\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 	
-	{\noindent\hspace{7cm}\begin{minipage}{\dimexpr(\textwidth)-7cm}
-	\maketitle
-	
-	\makeabstract
-	
-	\end{minipage} }
+	{\noindent\hspace{7cm}%
+        \begin{minipage}{\dimexpr(\textwidth)-7cm}
+            \maketitle
+
+            \makeabstract
+        \end{minipage}%
+    }
 
 %	\if@ack
 %	\footnotetext{\@acknowledgements}
